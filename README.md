@@ -66,6 +66,11 @@ If you want more custom domains added, send the list and I will extend
 - `rule/Surge/OverseasAI/OverseasAI.list`
 - `rule/Surge/OverseasAI/OverseasAI_Resolve.list` (same rules, IP rules without `no-resolve`)
 - `rule/Surge/OverseasAI/OverseasAI_Custom.list` (custom-only, already merged)
+- `rule/Clash/OverseasAI/OverseasAI.list`
+- `rule/Loon/OverseasAI/OverseasAI.list`
+- `rule/Shadowrocket/OverseasAI/OverseasAI.list`
+- `rule/QuantumultX/OverseasAI/OverseasAI.list`
+- `rule/Quantumult/OverseasAI/OverseasAI.list` (alias of QuantumultX format)
 
 ## Surge Usage / Surge 使用方式
 Add one RULE-SET pointing at the list you prefer and map it to a single
@@ -82,6 +87,27 @@ RULE-SET,OverseasAI,PROXY
 [Rule Set]
 OverseasAI = https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Surge/OverseasAI/OverseasAI.list
 ```
+
+## Other Clients / 其他客户端订阅
+
+### Clash
+Rule provider URL:
+`https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Clash/OverseasAI/OverseasAI.list`
+
+### Loon
+RULE-SET URL:
+`https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Loon/OverseasAI/OverseasAI.list`
+
+### Shadowrocket
+RULE-SET URL:
+`https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Shadowrocket/OverseasAI/OverseasAI.list`
+
+### Quantumult / QuantumultX
+Filter URL (policy name is embedded as `OverseasAI`):
+`https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/QuantumultX/OverseasAI/OverseasAI.list`
+
+Quantumult alias:
+`https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Quantumult/OverseasAI/OverseasAI.list`
 
 ## License / 许可
 Derived from `blackmatrix7/ios_rule_script` (GPL-2.0). See `LICENSE`.
