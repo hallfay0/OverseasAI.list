@@ -1,5 +1,7 @@
 DOMAIN,api.nvidia.com
 DOMAIN,build.nvidia.com
+DOMAIN-KEYWORD,bedrock
+DOMAIN-KEYWORD,bedrock-runtime
 DOMAIN-SUFFIX,ai21.com
 DOMAIN-SUFFIX,ai21labs.com
 DOMAIN-SUFFIX,aiplatform.googleapis.com
@@ -24,6 +26,7 @@ DOMAIN-SUFFIX,grammarly.com
 DOMAIN-SUFFIX,id.me
 DOMAIN-SUFFIX,ideogram.ai
 DOMAIN-SUFFIX,inflection.ai
+DOMAIN-SUFFIX,jasper.ai
 DOMAIN-SUFFIX,kaiber.ai
 DOMAIN-SUFFIX,krea.ai
 DOMAIN-SUFFIX,lambda.ai
@@ -34,11 +37,13 @@ DOMAIN-SUFFIX,leonardo.ai
 DOMAIN-SUFFIX,llamaindex.ai
 DOMAIN-SUFFIX,luma.ai
 DOMAIN-SUFFIX,meetgeek.ai
+DOMAIN-SUFFIX,meta.ai
 DOMAIN-SUFFIX,midjourney.com
 DOMAIN-SUFFIX,milvus.io
 DOMAIN-SUFFIX,murf.ai
 DOMAIN-SUFFIX,openai.azure.com
 DOMAIN-SUFFIX,otter.ai
+DOMAIN-SUFFIX,paddle.com
 DOMAIN-SUFFIX,phind.com
 DOMAIN-SUFFIX,pi.ai
 DOMAIN-SUFFIX,pika.art
@@ -66,7 +71,8 @@ DOMAIN-SUFFIX,trychroma.com
 DOMAIN-SUFFIX,udio.com
 DOMAIN-SUFFIX,voice.ai
 DOMAIN-SUFFIX,weaviate.io
+DOMAIN-SUFFIX,windsurf-telemetry.codeium.com
 DOMAIN-SUFFIX,windsurf.ai
 DOMAIN-SUFFIX,wordtune.com
-DOMAIN-KEYWORD,bedrock
-DOMAIN-KEYWORD,bedrock-runtime
+DOMAIN-SUFFIX,writesonic.com
+DOMAIN-SUFFIX,you.com

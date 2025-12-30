@@ -109,5 +109,26 @@ Filter URL (policy name is embedded as `OverseasAI`):
 Quantumult alias:
 `https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Quantumult/OverseasAI/OverseasAI.list`
 
+## Automation / 自动化
+
+Daily GitHub Actions syncs from upstream, rebuilds all client formats, and
+checks domains for NXDOMAIN. Deletion is **not** automatic; the report is for
+manual confirmation.
+
+每日自动同步上游、重建规则、检测域名 NXDOMAIN，但**不会自动删除**，仅输出报告供人工确认。
+
+Artifacts and state:
+- `reports/nxdomain_report.md`
+- `reports/nxdomain_candidates.txt`
+- `data/nxdomain_state.json`
+
+Scripts (local usage):
+
+```
+python scripts/sync_rules.py --upstream /path/to/ios_rule_script
+python scripts/build_clients.py
+python scripts/check_domains.py
+```
+
 ## License / 许可
 Derived from `blackmatrix7/ios_rule_script` (GPL-2.0). See `LICENSE`.
