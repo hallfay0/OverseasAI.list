@@ -1,1 +1,1 @@
-
+gateway.bingviz.microsoft.net
