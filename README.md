@@ -41,7 +41,7 @@ more.
 
 ### AI Media (Image/Video/Audio) / 生成式媒体
 Midjourney, Runway, Leonardo, Ideogram, Krea, Luma, Pika, Stability,
-DreamStudio, PlaygroundAI, Kaiber, ElevenLabs, Suno, Udio, and more.
+DreamStudio, PlaygroundAI, Kaiber, Lovart, ElevenLabs, Suno, Udio, and more.
 
 ### AI IDEs & Coding Tools / AI 编程工具
 GitHub Copilot, Cursor, Windsurf, Codeium, Augment, Tabnine, Supermaven,
