@@ -5,30 +5,42 @@
 # INCLUDED-CORE: OpenAI, Claude, Anthropic, Gemini, BardAI, Copilot, Civitai, Stripe, PayPal
 # INCLUDED-UPSTREAM-EXTRA: see README
 # INCLUDED-CUSTOM: see README
-# UPDATED: 2026-01-27 22:50:40
-# DOMAIN: 32
-# DOMAIN-SUFFIX: 405
-# DOMAIN-KEYWORD: 9
+# UPDATED: 2026-01-27 23:59:36
+# DOMAIN: 47
+# DOMAIN-SUFFIX: 412
+# DOMAIN-KEYWORD: 10
 # IP-CIDR: 2
 # IP-ASN: 2
 # USER-AGENT: 1
-# TOTAL: 451
+# TOTAL: 474
+DOMAIN,ai.azure.com
 DOMAIN,ai.google.dev
 DOMAIN,alkalimakersuite-pa.clients6.google.com
+DOMAIN,api.cloudflare.com
 DOMAIN,api.githubcopilot.com
+DOMAIN,api.jetbrains.ai
 DOMAIN,api.msn.com
 DOMAIN,api.ngc.nvidia.com
 DOMAIN,api.nvidia.com
 DOMAIN,api.statsig.com
 DOMAIN,assets.msn.com
+DOMAIN,auth.grazie.ai
+DOMAIN,aws-language-servers.us-east-1.amazonaws.com
+DOMAIN,aws-toolkit-language-servers.amazonaws.com
 DOMAIN,browser-intake-datadoghq.com
 DOMAIN,build.nvidia.com
 DOMAIN,cdn.usefathom.com
 DOMAIN,chat.openai.com.cdn.cloudflare.net
+DOMAIN,client-telemetry.us-east-1.amazonaws.com
+DOMAIN,codewhisperer.us-east-1.amazonaws.com
 DOMAIN,copilot.microsoft.com
+DOMAIN,desktop-release.codewhisperer.us-east-1.amazonaws.com
+DOMAIN,gateway.ai.cloudflare.com
 DOMAIN,gateway.bingviz.microsoft.net
 DOMAIN,gateway.bingviz.microsoftapp.net
 DOMAIN,generativelanguage.googleapis.com
+DOMAIN,idetoolkits-hostedfiles.amazonaws.com
+DOMAIN,idetoolkits.amazonwebservices.com
 DOMAIN,in.appcenter.ms
 DOMAIN,integrate.api.nvidia.com
 DOMAIN,location.microsoft.com
@@ -38,12 +50,15 @@ DOMAIN,openai-api.arkoselabs.com
 DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
 DOMAIN,openaicomproductionae4b.blob.core.windows.net
 DOMAIN,production-openaicom-storage.azureedge.net
+DOMAIN,q.us-east-1.amazonaws.com
 DOMAIN,r.bing.com
 DOMAIN,self.events.data.microsoft.com
 DOMAIN,servd-anthropic-website.b-cdn.net
 DOMAIN,services.bingapis.com
+DOMAIN,specs.q.us-east-1.amazonaws.com
 DOMAIN,static.cloudflareinsights.com
 DOMAIN,sydney.bing.com
+DOMAIN,telemetry.aws-language-servers.us-east-1.amazonaws.com
 DOMAIN,www.bing.com
 DOMAIN-SUFFIX,account-paypal.info
 DOMAIN-SUFFIX,account-paypal.net
@@ -70,6 +85,7 @@ DOMAIN-SUFFIX,artbreeder.com
 DOMAIN-SUFFIX,augment.dev
 DOMAIN-SUFFIX,augmentcode.com
 DOMAIN-SUFFIX,auth0.com
+DOMAIN-SUFFIX,azuredatabricks.net
 DOMAIN-SUFFIX,bard.google.com
 DOMAIN-SUFFIX,beibao.cn
 DOMAIN-SUFFIX,beibao.com
@@ -108,6 +124,7 @@ DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,claude.com
 DOMAIN-SUFFIX,client-api.arkoselabs.com
 DOMAIN-SUFFIX,clipdrop.co
+DOMAIN-SUFFIX,cloud.databricks.com
 DOMAIN-SUFFIX,codeium.com
 DOMAIN-SUFFIX,cohere.ai
 DOMAIN-SUFFIX,cohere.com
@@ -138,6 +155,7 @@ DOMAIN-SUFFIX,filipino-music.net
 DOMAIN-SUFFIX,fireflies.ai
 DOMAIN-SUFFIX,fireworks.ai
 DOMAIN-SUFFIX,fundpaypal.com
+DOMAIN-SUFFIX,gcp.databricks.com
 DOMAIN-SUFFIX,gemini.google
 DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,generativeai.google
@@ -186,6 +204,7 @@ DOMAIN-SUFFIX,meta.ai
 DOMAIN-SUFFIX,midjourney.com
 DOMAIN-SUFFIX,milvus.io
 DOMAIN-SUFFIX,mistral.ai
+DOMAIN-SUFFIX,ml.cloud.ibm.com
 DOMAIN-SUFFIX,models.dev
 DOMAIN-SUFFIX,murf.ai
 DOMAIN-SUFFIX,mywaytopay.info
@@ -403,6 +422,7 @@ DOMAIN-SUFFIX,segment.io
 DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,sheerid.com
 DOMAIN-SUFFIX,simility.com
+DOMAIN-SUFFIX,snowflakecomputing.com
 DOMAIN-SUFFIX,sourcegraph.com
 DOMAIN-SUFFIX,sslpaypal.org
 DOMAIN-SUFFIX,stability.ai
@@ -431,6 +451,7 @@ DOMAIN-SUFFIX,venmo.net
 DOMAIN-SUFFIX,venmo.org
 DOMAIN-SUFFIX,venmo.s3.amazonaws.com
 DOMAIN-SUFFIX,voice.ai
+DOMAIN-SUFFIX,watsonx.ai
 DOMAIN-SUFFIX,weaviate.io
 DOMAIN-SUFFIX,webmoneyinfo.com
 DOMAIN-SUFFIX,windsurf-telemetry.codeium.com
@@ -450,10 +471,12 @@ DOMAIN-SUFFIX,xoom.net.cn
 DOMAIN-SUFFIX,xoom.us
 DOMAIN-SUFFIX,xoomcom.com
 DOMAIN-SUFFIX,you.com
+DOMAIN-SUFFIX,zed.dev
 DOMAIN-KEYWORD,bedrock
 DOMAIN-KEYWORD,bedrock-runtime
 DOMAIN-KEYWORD,colab
 DOMAIN-KEYWORD,developerprofiles
+DOMAIN-KEYWORD,generativeai
 DOMAIN-KEYWORD,generativelanguage
 DOMAIN-KEYWORD,openai
 DOMAIN-KEYWORD,openaicom-api
