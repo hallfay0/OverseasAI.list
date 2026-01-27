@@ -5,14 +5,14 @@
 # INCLUDED-CORE: OpenAI, Claude, Anthropic, Gemini, BardAI, Copilot, Civitai, Stripe, PayPal
 # INCLUDED-UPSTREAM-EXTRA: see README
 # INCLUDED-CUSTOM: see README
-# UPDATED: 2026-01-27 03:29:29
+# UPDATED: 2026-01-27 22:50:40
 # HOST: 32
-# HOST-SUFFIX: 402
+# HOST-SUFFIX: 405
 # HOST-KEYWORD: 9
 # IP-CIDR: 2
 # IP-ASN: 2
 # USER-AGENT: 1
-# TOTAL: 448
+# TOTAL: 451
 HOST,ai.google.dev,OverseasAI
 HOST,alkalimakersuite-pa.clients6.google.com,OverseasAI
 HOST,api.githubcopilot.com,OverseasAI
@@ -161,6 +161,9 @@ HOST-SUFFIX,intercom.io,OverseasAI
 HOST-SUFFIX,intercomcdn.com,OverseasAI
 HOST-SUFFIX,jasper.ai,OverseasAI
 HOST-SUFFIX,kaiber.ai,OverseasAI
+HOST-SUFFIX,kilo.ai,OverseasAI
+HOST-SUFFIX,kilocode.ai,OverseasAI
+HOST-SUFFIX,kilocode.app,OverseasAI
 HOST-SUFFIX,krakenjs.com,OverseasAI
 HOST-SUFFIX,krea.ai,OverseasAI
 HOST-SUFFIX,lambda.ai,OverseasAI

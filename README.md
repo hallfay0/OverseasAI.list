@@ -44,7 +44,7 @@ Midjourney, Runway, Leonardo, Ideogram, Krea, Luma, Pika, Stability,
 DreamStudio, PlaygroundAI, Kaiber, Lovart, ElevenLabs, Suno, Udio, and more.
 
 ### AI IDEs & Coding Tools / AI 编程工具
-GitHub Copilot, Cursor, Windsurf, Codeium, Augment, Tabnine, Supermaven,
+GitHub Copilot, Cursor, Kilo Code, Windsurf, Codeium, Augment, Tabnine, Supermaven,
 Continue, AmpCode, Sourcegraph/Cody, Replit, Context7, Grep.app (MCP endpoints),
 and more.
 
