@@ -5,7 +5,7 @@
 # INCLUDED-CORE: OpenAI, Claude, Anthropic, Gemini, BardAI, Copilot, Civitai, Stripe, PayPal
 # INCLUDED-UPSTREAM-EXTRA: see README
 # INCLUDED-CUSTOM: see README
-# UPDATED: 2026-02-10 04:23:47
+# UPDATED: 2026-02-11 04:21:09
 # HOST: 47
 # HOST-SUFFIX: 412
 # HOST-KEYWORD: 10
@@ -16,7 +16,6 @@
 HOST,ai.azure.com,OverseasAI
 HOST,ai.google.dev,OverseasAI
 HOST,alkalimakersuite-pa.clients6.google.com,OverseasAI
-Host,antigravity-unleash.goog,OverseasAI
 HOST,api.cloudflare.com,OverseasAI
 HOST,api.githubcopilot.com,OverseasAI
 HOST,api.jetbrains.ai,OverseasAI
