@@ -1,9 +1,9 @@
-# NXDOMAIN Report (2026-03-02 04:03:37Z)
+# NXDOMAIN Report (2026-03-03 04:04:43Z)
 
 Checked domains: 457
-OK: 454
+OK: 455
 NXDOMAIN: 1
-UNKNOWN: 2
+UNKNOWN: 1
 
 Threshold: 3 consecutive NXDOMAIN
 
@@ -11,5 +11,4 @@ Threshold: 3 consecutive NXDOMAIN
 - gateway.bingviz.microsoft.net
 
 ## Unknowns
-- elevenlabs.com
 - xoom-experience.com
