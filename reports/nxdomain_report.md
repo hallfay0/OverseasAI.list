@@ -1,9 +1,9 @@
-# NXDOMAIN Report (2026-03-03 04:04:43Z)
+# NXDOMAIN Report (2026-03-04 03:58:26Z)
 
 Checked domains: 457
-OK: 455
+OK: 454
 NXDOMAIN: 1
-UNKNOWN: 1
+UNKNOWN: 2
 
 Threshold: 3 consecutive NXDOMAIN
 
@@ -11,4 +11,5 @@ Threshold: 3 consecutive NXDOMAIN
 - gateway.bingviz.microsoft.net
 
 ## Unknowns
+- thepaypalshop.com
 - xoom-experience.com
