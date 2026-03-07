@@ -1,90 +1,40 @@
 # Overseas AI Rules for Surge / 海外 AI 分流规则（Surge）
 
-This repo aggregates overseas AI/LLM services into a single Surge rule-set,
-based on the upstream `blackmatrix7/ios_rule_script` Surge rules and a curated
-set of AI-related custom domains.
+- English: see [English](#english)
+- 中文：见 [中文说明](#中文说明)
 
-本仓库将海外 AI/大模型相关服务整合为一个 Surge 规则集，基础规则来源于
-`blackmatrix7/ios_rule_script`，并补充了常用 AI 应用的自定义域名。
+## English
 
-## Sources (Upstream) / 上游规则来源
-- OpenAI
-- Claude
-- Anthropic
-- Gemini
-- BardAI
-- Copilot
-- Civitai
-- Stripe
-- PayPal
+### Overview
 
-## Coverage / 覆盖范围
-Model vendors, AI platforms, and apps are grouped below; the exact domains
-are in `OverseasAI.list`, and custom-only entries are in `OverseasAI_Custom.list`.
+This repository builds a single overseas AI rule-set for Surge and other rule-based clients. It combines selected upstream rules from `blackmatrix7/ios_rule_script` with a curated custom domain list for overseas AI products, coding tools, media tools, and AI infrastructure.
 
-以下按类别概览覆盖范围，具体域名请以 `OverseasAI.list` 为准，
-自定义补充项见 `OverseasAI_Custom.list`。
+### Scope
 
-### AI Model Vendors / 大模型厂商
-OpenAI, Anthropic, Google Gemini, xAI, Meta, Cohere, Mistral, Groq, Cerebras,
-AI21, Inflection (Pi), Reka, NVIDIA (NIM/API), and more.
+- Focus on overseas AI services and supporting platforms
+- Include model vendors, AI apps, AI IDEs, media tools, agent/search/data infrastructure, and AI-related verification or payment services
+- Exclude mainland-first AI services that are usually directly reachable from mainland China
+- Keep domains as narrow as possible; avoid overly broad catch-all domains when they would capture large amounts of non-AI traffic
 
-### AI Platforms & Infra / 平台与基础设施
-OpenRouter, Hugging Face, Together, Fireworks, Replicate, Fal, LangChain,
-LlamaIndex, Pinecone, Weaviate, Qdrant, Milvus, Chroma, OpenCode (opencode.ai /
-opncd.ai / models.dev), Firecrawl, Tavily, Deepgram, AssemblyAI, and more.
+### Coverage Snapshot
 
-### AI Apps / AI 应用
-Perplexity, Poe, Character.AI, You.com, Phind, Exa, Jasper, Copy.ai, Manus,
-Writesonic, Rytr, Sudowrite, Wordtune, Grammarly, QuillBot, Diabrowser,
-OpenClaw, and more.
+- Model vendors: OpenAI, Anthropic, Gemini, xAI, Cohere, Mistral, Groq, Cerebras, AI21, NVIDIA
+- Platforms and infra: OpenRouter, Hugging Face, Firecrawl, Tavily, Together, Fireworks, Replicate, Fal, LangChain, LlamaIndex, Pinecone, Weaviate, Qdrant, Milvus
+- Apps and coding tools: Perplexity, Poe, Cursor, Windsurf, v0, Lovable, Bolt, OpenClaw, Replit, AmpCode, Context7, Grep.app
+- Media and voice: Midjourney, Sora, Runway, Leonardo, Ideogram, ElevenLabs, Suno, Udio, Deepgram, AssemblyAI
 
-### AI Media (Image/Video/Audio) / 生成式媒体
-Midjourney, Runway, Leonardo, Ideogram, Krea, Luma, Pika, Stability,
-DreamStudio, PlaygroundAI, Kaiber, Lovart, ElevenLabs, Suno, Udio, Sora, and
-more.
+### Files
 
-### AI IDEs & Coding Tools / AI 编程工具
-GitHub Copilot, Cursor, Kilo Code, Windsurf, Codeium, Augment, Tabnine, Supermaven,
-Continue, AmpCode, Sourcegraph/Cody, Replit, Context7, Grep.app (MCP endpoints),
-v0, Lovable, Bolt, and more.
+- `rule/Surge/OverseasAI/OverseasAI.list`: main Surge rule-set
+- `rule/Surge/OverseasAI/OverseasAI_Resolve.list`: same rules with IP rules normalized
+- `rule/Surge/OverseasAI/OverseasAI_Custom.list`: custom-only domains merged into the main list
+- `rule/<Client>/OverseasAI/OverseasAI.list`: generated outputs for Clash, Loon, Shadowrocket, QuantumultX, and Quantumult
 
-### AI Verification & Payments / 认证与支付
-SheerID, Stripe, PayPal, ID.me, Paddle, LemonSqueezy, Chargebee,
-FastSpring, Checkout.com, and more.
+### Usage
 
-## Custom AI Domains / 自定义 AI 域名（上游未包含）
-Custom domains are merged into the main list and recorded in:
-`rule/Surge/OverseasAI/OverseasAI_Custom.list`.
+Surge:
 
-自定义域名已合并进主规则，并记录在：
-`rule/Surge/OverseasAI/OverseasAI_Custom.list`。
-
-If you want more custom domains added, send the list and I will extend
-`OverseasAI_Custom.list` and re-merge.
-
-如果需要新增更多自定义域名，请提供清单，我会扩展
-`OverseasAI_Custom.list` 并重新合并。
-
-## Files / 文件
-- `rule/Surge/OverseasAI/OverseasAI.list`
-- `rule/Surge/OverseasAI/OverseasAI_Resolve.list` (same rules, IP rules without `no-resolve`)
-- `rule/Surge/OverseasAI/OverseasAI_Custom.list` (custom-only, already merged)
-- `rule/Clash/OverseasAI/OverseasAI.list`
-- `rule/Loon/OverseasAI/OverseasAI.list`
-- `rule/Shadowrocket/OverseasAI/OverseasAI.list`
-- `rule/QuantumultX/OverseasAI/OverseasAI.list`
-- `rule/Quantumult/OverseasAI/OverseasAI.list` (alias of QuantumultX format)
-
-## Surge Usage / Surge 使用方式
-Add one RULE-SET pointing at the list you prefer and map it to a single
-proxy policy.
-
-添加一个 RULE-SET 指向你选择的列表，并映射到单一代理策略即可。
-
-Example / 示例:
-
-```
+```ini
 [Rule]
 RULE-SET,OverseasAI,PROXY
 
@@ -92,47 +42,111 @@ RULE-SET,OverseasAI,PROXY
 OverseasAI = https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Surge/OverseasAI/OverseasAI.list
 ```
 
-## Other Clients / 其他客户端订阅
+Other clients:
 
-### Clash
-Rule provider URL:
-`https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Clash/OverseasAI/OverseasAI.list`
+- Clash: `https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Clash/OverseasAI/OverseasAI.list`
+- Loon: `https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Loon/OverseasAI/OverseasAI.list`
+- Shadowrocket: `https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Shadowrocket/OverseasAI/OverseasAI.list`
+- QuantumultX: `https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/QuantumultX/OverseasAI/OverseasAI.list`
+- Quantumult: `https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Quantumult/OverseasAI/OverseasAI.list`
 
-### Loon
-RULE-SET URL:
-`https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Loon/OverseasAI/OverseasAI.list`
+### Automation and Local Workflow
 
-### Shadowrocket
-RULE-SET URL:
-`https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Shadowrocket/OverseasAI/OverseasAI.list`
+GitHub Actions runs daily sync, rebuild, and NXDOMAIN checks. Deletions are not automatic; review reports manually.
 
-### Quantumult / QuantumultX
-Filter URL (policy name is embedded as `OverseasAI`):
-`https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/QuantumultX/OverseasAI/OverseasAI.list`
+Local commands:
 
-Quantumult alias:
-`https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Quantumult/OverseasAI/OverseasAI.list`
-
-## Automation / 自动化
-
-Daily GitHub Actions syncs from upstream, rebuilds all client formats, and
-checks domains for NXDOMAIN. Deletion is **not** automatic; the report is for
-manual confirmation.
-
-每日自动同步上游、重建规则、检测域名 NXDOMAIN，但**不会自动删除**，仅输出报告供人工确认。
-
-Artifacts and state:
-- `reports/nxdomain_report.md`
-- `reports/nxdomain_candidates.txt`
-- `data/nxdomain_state.json`
-
-Scripts (local usage):
-
-```
+```bash
 python scripts/sync_rules.py --upstream /path/to/ios_rule_script
 python scripts/build_clients.py
 python scripts/check_domains.py
 ```
 
+Artifacts:
+
+- `reports/nxdomain_report.md`
+- `reports/nxdomain_candidates.txt`
+- `reports/upstream_missing.txt`
+- `data/nxdomain_state.json`
+
+### Adding Domains
+
+1. Edit `rule/Surge/OverseasAI/OverseasAI_Custom.list`
+2. Rebuild the merged rule-set and client outputs
+3. Review the generated diff before commit
+
+## 中文说明
+
+### 项目简介
+
+这个仓库维护一份面向 Surge 及其他规则客户端的“海外 AI 分流规则集”。规则由两部分组成：上游 `blackmatrix7/ios_rule_script` 的精选规则，以及仓库维护的自定义海外 AI 域名清单。
+
+### 收录范围
+
+- 以海外 AI 服务和相关平台为主
+- 收录大模型厂商、AI 应用、AI 编程工具、生成式媒体、Agent / 搜索 / 数据基础设施，以及 AI 相关认证或支付服务
+- 默认不收录中国大陆通常可直接访问的大陆系 AI 服务
+- 尽量使用边界清晰的域名，避免把大量非 AI 流量一并纳入
+
+### 覆盖概览
+
+- 模型厂商：OpenAI、Anthropic、Gemini、xAI、Cohere、Mistral、Groq、Cerebras、AI21、NVIDIA
+- 平台与基础设施：OpenRouter、Hugging Face、Firecrawl、Tavily、Together、Fireworks、Replicate、Fal、LangChain、LlamaIndex、Pinecone、Weaviate、Qdrant、Milvus
+- 应用与编程工具：Perplexity、Poe、Cursor、Windsurf、v0、Lovable、Bolt、OpenClaw、Replit、AmpCode、Context7、Grep.app
+- 媒体与语音：Midjourney、Sora、Runway、Leonardo、Ideogram、ElevenLabs、Suno、Udio、Deepgram、AssemblyAI
+
+### 文件说明
+
+- `rule/Surge/OverseasAI/OverseasAI.list`：Surge 主规则
+- `rule/Surge/OverseasAI/OverseasAI_Resolve.list`：去掉 `no-resolve` 的 Surge 变体
+- `rule/Surge/OverseasAI/OverseasAI_Custom.list`：仅自定义补充域名，已合并进主规则
+- `rule/<Client>/OverseasAI/OverseasAI.list`：各客户端生成结果
+
+### 使用方法
+
+Surge 示例：
+
+```ini
+[Rule]
+RULE-SET,OverseasAI,PROXY
+
+[Rule Set]
+OverseasAI = https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Surge/OverseasAI/OverseasAI.list
+```
+
+其他客户端订阅地址：
+
+- Clash：`https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Clash/OverseasAI/OverseasAI.list`
+- Loon：`https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Loon/OverseasAI/OverseasAI.list`
+- Shadowrocket：`https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Shadowrocket/OverseasAI/OverseasAI.list`
+- QuantumultX：`https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/QuantumultX/OverseasAI/OverseasAI.list`
+- Quantumult：`https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Quantumult/OverseasAI/OverseasAI.list`
+
+### 自动化与本地更新
+
+GitHub Actions 会按日同步上游、重建规则并检查 NXDOMAIN。候选域名不会自动删除，需要人工复核报告。
+
+本地常用命令：
+
+```bash
+python scripts/sync_rules.py --upstream /path/to/ios_rule_script
+python scripts/build_clients.py
+python scripts/check_domains.py
+```
+
+相关产物：
+
+- `reports/nxdomain_report.md`
+- `reports/nxdomain_candidates.txt`
+- `reports/upstream_missing.txt`
+- `data/nxdomain_state.json`
+
+### 如何补充新域名
+
+1. 编辑 `rule/Surge/OverseasAI/OverseasAI_Custom.list`
+2. 重新生成主规则和各客户端规则
+3. 检查 diff，确认没有误收录或过宽域名后再提交
+
 ## License / 许可
+
 Derived from `blackmatrix7/ios_rule_script` (GPL-2.0). See `LICENSE`.
