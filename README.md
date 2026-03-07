@@ -32,21 +32,22 @@ AI21, Inflection (Pi), Reka, NVIDIA (NIM/API), and more.
 ### AI Platforms & Infra / 平台与基础设施
 OpenRouter, Hugging Face, Together, Fireworks, Replicate, Fal, LangChain,
 LlamaIndex, Pinecone, Weaviate, Qdrant, Milvus, Chroma, OpenCode (opencode.ai /
-opncd.ai / models.dev), and more.
+opncd.ai / models.dev), Firecrawl, Tavily, Deepgram, AssemblyAI, and more.
 
 ### AI Apps / AI 应用
 Perplexity, Poe, Character.AI, You.com, Phind, Exa, Jasper, Copy.ai, Manus,
-Writesonic, Rytr, Sudowrite, Wordtune, Grammarly, QuillBot, Diabrowser, and
-more.
+Writesonic, Rytr, Sudowrite, Wordtune, Grammarly, QuillBot, Diabrowser,
+OpenClaw, and more.
 
 ### AI Media (Image/Video/Audio) / 生成式媒体
 Midjourney, Runway, Leonardo, Ideogram, Krea, Luma, Pika, Stability,
-DreamStudio, PlaygroundAI, Kaiber, Lovart, ElevenLabs, Suno, Udio, and more.
+DreamStudio, PlaygroundAI, Kaiber, Lovart, ElevenLabs, Suno, Udio, Sora, and
+more.
 
 ### AI IDEs & Coding Tools / AI 编程工具
 GitHub Copilot, Cursor, Kilo Code, Windsurf, Codeium, Augment, Tabnine, Supermaven,
 Continue, AmpCode, Sourcegraph/Cody, Replit, Context7, Grep.app (MCP endpoints),
-and more.
+v0, Lovable, Bolt, and more.
 
 ### AI Verification & Payments / 认证与支付
 SheerID, Stripe, PayPal, ID.me, Paddle, LemonSqueezy, Chargebee,

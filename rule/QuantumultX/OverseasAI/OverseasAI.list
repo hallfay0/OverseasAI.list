@@ -5,14 +5,14 @@
 # INCLUDED-CORE: OpenAI, Claude, Anthropic, Gemini, BardAI, Copilot, Civitai, Stripe, PayPal
 # INCLUDED-UPSTREAM-EXTRA: see README
 # INCLUDED-CUSTOM: see README
-# UPDATED: 2026-03-07 03:50:51
+# UPDATED: 2026-03-08 00:32:35
 # HOST: 47
-# HOST-SUFFIX: 412
+# HOST-SUFFIX: 424
 # HOST-KEYWORD: 10
 # IP-CIDR: 2
 # IP-ASN: 2
 # USER-AGENT: 1
-# TOTAL: 474
+# TOTAL: 486
 HOST,ai.azure.com,OverseasAI
 HOST,ai.google.dev,OverseasAI
 HOST,alkalimakersuite-pa.clients6.google.com,OverseasAI
@@ -82,6 +82,7 @@ HOST-SUFFIX,api.nvidia.com,OverseasAI
 HOST-SUFFIX,api.statsig.com,OverseasAI
 HOST-SUFFIX,apis.google.com,OverseasAI
 HOST-SUFFIX,artbreeder.com,OverseasAI
+HOST-SUFFIX,assemblyai.com,OverseasAI
 HOST-SUFFIX,augment.dev,OverseasAI
 HOST-SUFFIX,augmentcode.com,OverseasAI
 HOST-SUFFIX,auth0.com,OverseasAI
@@ -96,6 +97,7 @@ HOST-SUFFIX,billmelater.info,OverseasAI
 HOST-SUFFIX,billmelater.net,OverseasAI
 HOST-SUFFIX,bing-shopping.microsoft-falcon.io,OverseasAI
 HOST-SUFFIX,bml.info,OverseasAI
+HOST-SUFFIX,bolt.new,OverseasAI
 HOST-SUFFIX,braintreegateway.com,OverseasAI
 HOST-SUFFIX,braintreegateway.tv,OverseasAI
 HOST-SUFFIX,braintreepayments.com,OverseasAI
@@ -122,6 +124,7 @@ HOST-SUFFIX,checkout.com,OverseasAI
 HOST-SUFFIX,civitai.com,OverseasAI
 HOST-SUFFIX,claude.ai,OverseasAI
 HOST-SUFFIX,claude.com,OverseasAI
+HOST-SUFFIX,clawhub.ai,OverseasAI
 HOST-SUFFIX,client-api.arkoselabs.com,OverseasAI
 HOST-SUFFIX,clipdrop.co,OverseasAI
 HOST-SUFFIX,cloud.databricks.com,OverseasAI
@@ -133,6 +136,7 @@ HOST-SUFFIX,continue.dev,OverseasAI
 HOST-SUFFIX,copy.ai,OverseasAI
 HOST-SUFFIX,cursor.com,OverseasAI
 HOST-SUFFIX,cursor.sh,OverseasAI
+HOST-SUFFIX,deepgram.com,OverseasAI
 HOST-SUFFIX,deepinfra.com,OverseasAI
 HOST-SUFFIX,deepmind.com,OverseasAI
 HOST-SUFFIX,deepmind.google,OverseasAI
@@ -152,6 +156,7 @@ HOST-SUFFIX,fastspring.com,OverseasAI
 HOST-SUFFIX,fathom.video,OverseasAI
 HOST-SUFFIX,featuregates.org,OverseasAI
 HOST-SUFFIX,filipino-music.net,OverseasAI
+HOST-SUFFIX,firecrawl.dev,OverseasAI
 HOST-SUFFIX,fireflies.ai,OverseasAI
 HOST-SUFFIX,fireworks.ai,OverseasAI
 HOST-SUFFIX,fundpaypal.com,OverseasAI
@@ -168,6 +173,7 @@ HOST-SUFFIX,grep.app,OverseasAI
 HOST-SUFFIX,grok.com,OverseasAI
 HOST-SUFFIX,groq.com,OverseasAI
 HOST-SUFFIX,hf.co,OverseasAI
+HOST-SUFFIX,hf.space,OverseasAI
 HOST-SUFFIX,host.livekit.cloud,OverseasAI
 HOST-SUFFIX,huggingface.co,OverseasAI
 HOST-SUFFIX,i-o-u.info,OverseasAI
@@ -194,6 +200,7 @@ HOST-SUFFIX,llamaindex.ai,OverseasAI
 HOST-SUFFIX,loanbuilder.com,OverseasAI
 HOST-SUFFIX,login-paypal.com,OverseasAI
 HOST-SUFFIX,login-paypal.info,OverseasAI
+HOST-SUFFIX,lovable.dev,OverseasAI
 HOST-SUFFIX,lovart.ai,OverseasAI
 HOST-SUFFIX,luma.ai,OverseasAI
 HOST-SUFFIX,manus.ai,OverseasAI
@@ -216,6 +223,7 @@ HOST-SUFFIX,openai.azure.com,OverseasAI
 HOST-SUFFIX,openai.com,OverseasAI
 HOST-SUFFIX,openaiapi-site.azureedge.net,OverseasAI
 HOST-SUFFIX,openaicom.imgix.net,OverseasAI
+HOST-SUFFIX,openclaw.ai,OverseasAI
 HOST-SUFFIX,opencode.ai,OverseasAI
 HOST-SUFFIX,opencode.com,OverseasAI
 HOST-SUFFIX,opencode.dev,OverseasAI
@@ -423,6 +431,7 @@ HOST-SUFFIX,sentry.io,OverseasAI
 HOST-SUFFIX,sheerid.com,OverseasAI
 HOST-SUFFIX,simility.com,OverseasAI
 HOST-SUFFIX,snowflakecomputing.com,OverseasAI
+HOST-SUFFIX,sora.com,OverseasAI
 HOST-SUFFIX,sourcegraph.com,OverseasAI
 HOST-SUFFIX,sslpaypal.org,OverseasAI
 HOST-SUFFIX,stability.ai,OverseasAI
@@ -437,6 +446,7 @@ HOST-SUFFIX,swiftfinancial.com,OverseasAI
 HOST-SUFFIX,swiftfinancial.info,OverseasAI
 HOST-SUFFIX,swiftfinancial.net,OverseasAI
 HOST-SUFFIX,tabnine.com,OverseasAI
+HOST-SUFFIX,tavily.com,OverseasAI
 HOST-SUFFIX,thepaypalshop.com,OverseasAI
 HOST-SUFFIX,theshoppingexpresslane.net,OverseasAI
 HOST-SUFFIX,tldv.io,OverseasAI
@@ -444,6 +454,8 @@ HOST-SUFFIX,together.ai,OverseasAI
 HOST-SUFFIX,trychroma.com,OverseasAI
 HOST-SUFFIX,turn.livekit.cloud,OverseasAI
 HOST-SUFFIX,udio.com,OverseasAI
+HOST-SUFFIX,v0.app,OverseasAI
+HOST-SUFFIX,v0.dev,OverseasAI
 HOST-SUFFIX,venmo-touch.com,OverseasAI
 HOST-SUFFIX,venmo.com,OverseasAI
 HOST-SUFFIX,venmo.info,OverseasAI
