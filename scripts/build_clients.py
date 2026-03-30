@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import json
+import re
+import shutil
+import subprocess
 from collections import Counter
 from pathlib import Path
 
@@ -76,6 +80,82 @@ def build_qx_header(name: str, base_meta: list[str], counts: Counter) -> list[st
     return header
 
 
+def wildcard_to_regex(pattern: str) -> str:
+    """将 DOMAIN-WILDCARD 模式转换为 Go 正则表达式（sing-box domain_regex 字段）。
+    例：*.foo.com → ^[^.]+\\.foo\\.com$
+    """
+    if pattern.startswith("*."):
+        suffix = re.escape(pattern[2:])
+        return f"^[^.]+\\.{suffix}$"
+    escaped = re.escape(pattern).replace(r"\*", "[^.]+")
+    return f"^{escaped}$"
+
+
+def build_singbox(rules: list[str], output_dir: Path) -> None:
+    rules_map: dict[str, list] = {
+        "domain": [],
+        "domain_suffix": [],
+        "domain_keyword": [],
+        "domain_regex": [],
+        "ip_cidr": [],
+    }
+    skipped: Counter = Counter()
+
+    for rule in rules:
+        # 去掉 ,no-resolve 修饰符（Surge 专用）
+        clean = rule.replace(",no-resolve", "")
+        parts = clean.split(",", 1)
+        if len(parts) != 2:
+            continue
+        rule_type, value = parts[0].strip(), parts[1].strip()
+
+        if rule_type == "DOMAIN":
+            rules_map["domain"].append(value)
+        elif rule_type == "DOMAIN-SUFFIX":
+            rules_map["domain_suffix"].append(value)
+        elif rule_type == "DOMAIN-KEYWORD":
+            rules_map["domain_keyword"].append(value)
+        elif rule_type == "DOMAIN-WILDCARD":
+            rules_map["domain_regex"].append(wildcard_to_regex(value))
+        elif rule_type == "DOMAIN-REGEX":
+            rules_map["domain_regex"].append(value)
+        elif rule_type in ("IP-CIDR", "IP-CIDR6"):
+            rules_map["ip_cidr"].append(value)
+        elif rule_type in ("IP-ASN", "USER-AGENT"):
+            skipped[rule_type] += 1
+
+    for rule_type, count in skipped.items():
+        print(
+            f"  [Singbox] Skipped {count} {rule_type} rule(s) (not supported in rule-set)"
+        )
+
+    rule_entry = {k: v for k, v in rules_map.items() if v}
+    ruleset = {"version": 3, "rules": [rule_entry]}
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+    json_path = output_dir / "OverseasAI.json"
+    srs_path = output_dir / "OverseasAI.srs"
+
+    json_path.write_text(json.dumps(ruleset, indent=2, ensure_ascii=False) + "\n")
+
+    counts_str = ", ".join(f"{len(v)} {k}" for k, v in rule_entry.items())
+    print(f"  [Singbox] .json written: {json_path} ({counts_str})")
+
+    singbox_bin = shutil.which("sing-box")
+    if singbox_bin:
+        result = subprocess.run(
+            [singbox_bin, "rule-set", "compile", str(json_path), "-o", str(srs_path)],
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode == 0:
+            print(f"  [Singbox] .srs compiled:  {srs_path}")
+        else:
+            print(f"  [Singbox] WARNING: compile failed:\n{result.stderr.strip()}")
+    else:
+        print("  [Singbox] sing-box not found in PATH; .srs compilation skipped")
+
+
 def main() -> None:
     repo_root = Path(__file__).resolve().parents[1]
     surge_path = repo_root / "rule" / "Surge" / "OverseasAI" / "OverseasAI.list"
@@ -106,7 +186,9 @@ def main() -> None:
         out_dir = repo_root / "rule" / platform / "OverseasAI"
         out_dir.mkdir(parents=True, exist_ok=True)
         out_path = out_dir / "OverseasAI.list"
-        out_path.write_text("\n".join(surge_header) + "\n" + "\n".join(rules_sorted) + "\n")
+        out_path.write_text(
+            "\n".join(surge_header) + "\n" + "\n".join(rules_sorted) + "\n"
+        )
 
     # QuantumultX transform
     qx_rules = []
@@ -147,6 +229,9 @@ def main() -> None:
     q_dir.mkdir(parents=True, exist_ok=True)
     q_path = q_dir / "OverseasAI.list"
     q_path.write_text("\n".join(qx_header) + "\n" + "\n".join(qx_rules) + "\n")
+
+    singbox_dir = repo_root / "rule" / "Singbox" / "OverseasAI"
+    build_singbox(rules_sorted, singbox_dir)
 
 
 if __name__ == "__main__":

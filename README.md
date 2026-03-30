@@ -29,6 +29,8 @@ This repository builds a single overseas AI rule-set for Surge and other rule-ba
 - `rule/Surge/OverseasAI/OverseasAI_Resolve.list`: same rules with IP rules normalized
 - `rule/Surge/OverseasAI/OverseasAI_Custom.list`: custom-only domains merged into the main list
 - `rule/<Client>/OverseasAI/OverseasAI.list`: generated outputs for Clash, Loon, Shadowrocket, QuantumultX, and Quantumult
+- `rule/Singbox/OverseasAI/OverseasAI.json`: sing-box rule-set source format (version 3)
+- `rule/Singbox/OverseasAI/OverseasAI.srs`: sing-box rule-set binary format (compiled)
 
 ### Usage
 
@@ -49,6 +51,33 @@ Other clients:
 - Shadowrocket: `https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Shadowrocket/OverseasAI/OverseasAI.list`
 - QuantumultX: `https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/QuantumultX/OverseasAI/OverseasAI.list`
 - Quantumult: `https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Quantumult/OverseasAI/OverseasAI.list`
+- sing-box (.json): `https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Singbox/OverseasAI/OverseasAI.json`
+- sing-box (.srs): `https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Singbox/OverseasAI/OverseasAI.srs`
+
+sing-box config snippet:
+
+```json
+{
+  "route": {
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "overseas-ai",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Singbox/OverseasAI/OverseasAI.srs",
+        "download_detour": "proxy"
+      }
+    ],
+    "rules": [
+      {
+        "rule_set": "overseas-ai",
+        "action": "route",
+        "outbound": "proxy"
+      }
+    ]
+  }
+}
+```
 
 ### Automation and Local Workflow
 
@@ -101,6 +130,8 @@ Artifacts:
 - `rule/Surge/OverseasAI/OverseasAI_Resolve.list`：去掉 `no-resolve` 的 Surge 变体
 - `rule/Surge/OverseasAI/OverseasAI_Custom.list`：仅自定义补充域名，已合并进主规则
 - `rule/<Client>/OverseasAI/OverseasAI.list`：各客户端生成结果
+- `rule/Singbox/OverseasAI/OverseasAI.json`：sing-box rule-set 源格式（version 3）
+- `rule/Singbox/OverseasAI/OverseasAI.srs`：sing-box rule-set 二进制格式（编译后）
 
 ### 使用方法
 
@@ -121,6 +152,8 @@ OverseasAI = https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rul
 - Shadowrocket：`https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Shadowrocket/OverseasAI/OverseasAI.list`
 - QuantumultX：`https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/QuantumultX/OverseasAI/OverseasAI.list`
 - Quantumult：`https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Quantumult/OverseasAI/OverseasAI.list`
+- sing-box (.json)：`https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Singbox/OverseasAI/OverseasAI.json`
+- sing-box (.srs)：`https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Singbox/OverseasAI/OverseasAI.srs`
 
 ### 自动化与本地更新
 
