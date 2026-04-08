@@ -6,13 +6,13 @@
 # INCLUDED-UPSTREAM-EXTRA: see README
 # INCLUDED-CUSTOM: see README
 # UPDATED: 2026-04-07 04:24:28
-# HOST: 47
-# HOST-SUFFIX: 424
+# HOST: 48
+# HOST-SUFFIX: 428
 # HOST-KEYWORD: 10
 # IP-CIDR: 2
 # IP-ASN: 2
 # USER-AGENT: 1
-# TOTAL: 486
+# TOTAL: 491
 HOST,ai.azure.com,OverseasAI
 HOST,ai.google.dev,OverseasAI
 HOST,alkalimakersuite-pa.clients6.google.com,OverseasAI
@@ -31,6 +31,7 @@ HOST,browser-intake-datadoghq.com,OverseasAI
 HOST,build.nvidia.com,OverseasAI
 HOST,cdn.usefathom.com,OverseasAI
 HOST,chat.openai.com.cdn.cloudflare.net,OverseasAI
+HOST,clau.de,OverseasAI
 HOST,client-telemetry.us-east-1.amazonaws.com,OverseasAI
 HOST,codewhisperer.us-east-1.amazonaws.com,OverseasAI
 HOST,copilot.microsoft.com,OverseasAI
@@ -124,6 +125,10 @@ HOST-SUFFIX,checkout.com,OverseasAI
 HOST-SUFFIX,civitai.com,OverseasAI
 HOST-SUFFIX,claude.ai,OverseasAI
 HOST-SUFFIX,claude.com,OverseasAI
+HOST-SUFFIX,claude.site,OverseasAI
+HOST-SUFFIX,claudemcpclient.com,OverseasAI
+HOST-SUFFIX,claudemcpcontent.com,OverseasAI
+HOST-SUFFIX,claudeusercontent.com,OverseasAI
 HOST-SUFFIX,clawhub.ai,OverseasAI
 HOST-SUFFIX,client-api.arkoselabs.com,OverseasAI
 HOST-SUFFIX,clipdrop.co,OverseasAI

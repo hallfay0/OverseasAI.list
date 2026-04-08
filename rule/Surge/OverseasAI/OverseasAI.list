@@ -6,13 +6,13 @@
 # INCLUDED-UPSTREAM-EXTRA: see README
 # INCLUDED-CUSTOM: see README
 # UPDATED: 2026-04-07 04:24:28
-# DOMAIN: 47
-# DOMAIN-SUFFIX: 424
+# DOMAIN: 48
+# DOMAIN-SUFFIX: 428
 # DOMAIN-KEYWORD: 10
 # IP-CIDR: 2
 # IP-ASN: 2
 # USER-AGENT: 1
-# TOTAL: 486
+# TOTAL: 491
 DOMAIN,ai.azure.com
 DOMAIN,ai.google.dev
 DOMAIN,alkalimakersuite-pa.clients6.google.com
@@ -29,6 +29,7 @@ DOMAIN,aws-language-servers.us-east-1.amazonaws.com
 DOMAIN,aws-toolkit-language-servers.amazonaws.com
 DOMAIN,browser-intake-datadoghq.com
 DOMAIN,build.nvidia.com
+DOMAIN,clau.de
 DOMAIN,cdn.usefathom.com
 DOMAIN,chat.openai.com.cdn.cloudflare.net
 DOMAIN,client-telemetry.us-east-1.amazonaws.com
@@ -124,6 +125,10 @@ DOMAIN-SUFFIX,checkout.com
 DOMAIN-SUFFIX,civitai.com
 DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,claude.site
+DOMAIN-SUFFIX,claudemcpclient.com
+DOMAIN-SUFFIX,claudemcpcontent.com
+DOMAIN-SUFFIX,claudeusercontent.com
 DOMAIN-SUFFIX,clawhub.ai
 DOMAIN-SUFFIX,client-api.arkoselabs.com
 DOMAIN-SUFFIX,clipdrop.co

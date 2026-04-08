@@ -7,6 +7,7 @@ DOMAIN,auth.grazie.ai
 DOMAIN,aws-language-servers.us-east-1.amazonaws.com
 DOMAIN,aws-toolkit-language-servers.amazonaws.com
 DOMAIN,build.nvidia.com
+DOMAIN,clau.de
 DOMAIN,client-telemetry.us-east-1.amazonaws.com
 DOMAIN,codewhisperer.us-east-1.amazonaws.com
 DOMAIN,desktop-release.codewhisperer.us-east-1.amazonaws.com
@@ -34,6 +35,10 @@ DOMAIN-SUFFIX,chargebee.com
 DOMAIN-SUFFIX,checkout.com
 DOMAIN-SUFFIX,clawhub.ai
 DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,claude.site
+DOMAIN-SUFFIX,claudemcpclient.com
+DOMAIN-SUFFIX,claudemcpcontent.com
+DOMAIN-SUFFIX,claudeusercontent.com
 DOMAIN-SUFFIX,cloud.databricks.com
 DOMAIN-SUFFIX,codeium.com
 DOMAIN-SUFFIX,context7.com
