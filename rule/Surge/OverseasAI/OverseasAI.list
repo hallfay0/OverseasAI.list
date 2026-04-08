@@ -5,7 +5,7 @@
 # INCLUDED-CORE: OpenAI, Claude, Anthropic, Gemini, BardAI, Copilot, Civitai, Stripe, PayPal
 # INCLUDED-UPSTREAM-EXTRA: see README
 # INCLUDED-CUSTOM: see README
-# UPDATED: 2026-04-07 04:24:28
+# UPDATED: 2026-04-08 04:27:21
 # DOMAIN: 48
 # DOMAIN-SUFFIX: 428
 # DOMAIN-KEYWORD: 10
@@ -29,9 +29,9 @@ DOMAIN,aws-language-servers.us-east-1.amazonaws.com
 DOMAIN,aws-toolkit-language-servers.amazonaws.com
 DOMAIN,browser-intake-datadoghq.com
 DOMAIN,build.nvidia.com
-DOMAIN,clau.de
 DOMAIN,cdn.usefathom.com
 DOMAIN,chat.openai.com.cdn.cloudflare.net
+DOMAIN,clau.de
 DOMAIN,client-telemetry.us-east-1.amazonaws.com
 DOMAIN,codewhisperer.us-east-1.amazonaws.com
 DOMAIN,copilot.microsoft.com
