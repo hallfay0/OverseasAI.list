@@ -1,4 +1,4 @@
-# NXDOMAIN Report (2026-04-22 04:37:28Z)
+# NXDOMAIN Report (2026-04-23 04:42:36Z)
 
 Checked domains: 474
 OK: 469
@@ -9,6 +9,7 @@ Threshold: 3 consecutive NXDOMAIN
 
 ## Candidates
 - gateway.bingviz.microsoft.net
+- paypal-referral.com
 
 ## Unknowns
 - simility.com

@@ -1,1 +1,2 @@
 gateway.bingviz.microsoft.net
+paypal-referral.com
