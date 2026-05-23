@@ -1,9 +1,9 @@
-# NXDOMAIN Report (2026-05-22 05:56:32Z)
+# NXDOMAIN Report (2026-05-23 05:32:03Z)
 
 Checked domains: 474
-OK: 468
+OK: 469
 NXDOMAIN: 2
-UNKNOWN: 4
+UNKNOWN: 3
 
 Threshold: 3 consecutive NXDOMAIN
 
@@ -12,7 +12,6 @@ Threshold: 3 consecutive NXDOMAIN
 - paypal-referral.com
 
 ## Unknowns
-- kilocode.app
 - simility.com
 - thepaypalshop.com
 - xoom-experience.com
