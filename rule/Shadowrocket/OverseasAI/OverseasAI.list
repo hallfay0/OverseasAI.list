@@ -7,12 +7,12 @@
 # INCLUDED-CUSTOM: see README
 # UPDATED: 2026-05-27 06:07:40
 # DOMAIN: 48
-# DOMAIN-SUFFIX: 428
+# DOMAIN-SUFFIX: 434
 # DOMAIN-KEYWORD: 10
 # IP-CIDR: 2
 # IP-ASN: 2
 # USER-AGENT: 1
-# TOTAL: 491
+# TOTAL: 497
 DOMAIN,ai.azure.com
 DOMAIN,ai.google.dev
 DOMAIN,alkalimakersuite-pa.clients6.google.com
@@ -159,6 +159,7 @@ DOMAIN-SUFFIX,experiencebillmelater.com
 DOMAIN-SUFFIX,fal.ai
 DOMAIN-SUFFIX,fastspring.com
 DOMAIN-SUFFIX,fathom.video
+DOMAIN-SUFFIX,featureassets.org
 DOMAIN-SUFFIX,featuregates.org
 DOMAIN-SUFFIX,filipino-music.net
 DOMAIN-SUFFIX,firecrawl.dev
@@ -175,7 +176,12 @@ DOMAIN-SUFFIX,gmoney.org
 DOMAIN-SUFFIX,google.com
 DOMAIN-SUFFIX,grammarly.com
 DOMAIN-SUFFIX,grep.app
+DOMAIN-SUFFIX,grok-sandbox.com
 DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,grokipedia.com
+DOMAIN-SUFFIX,groksupport.com
+DOMAIN-SUFFIX,groktpcontent.com
+DOMAIN-SUFFIX,grokusercontent.com
 DOMAIN-SUFFIX,groq.com
 DOMAIN-SUFFIX,hf.co
 DOMAIN-SUFFIX,hf.space
