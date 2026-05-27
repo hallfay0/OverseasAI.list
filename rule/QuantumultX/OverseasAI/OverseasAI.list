@@ -7,12 +7,12 @@
 # INCLUDED-CUSTOM: see README
 # UPDATED: 2026-05-27 06:07:40
 # HOST: 48
-# HOST-SUFFIX: 428
+# HOST-SUFFIX: 434
 # HOST-KEYWORD: 10
 # IP-CIDR: 2
 # IP-ASN: 2
 # USER-AGENT: 1
-# TOTAL: 491
+# TOTAL: 497
 HOST,ai.azure.com,OverseasAI
 HOST,ai.google.dev,OverseasAI
 HOST,alkalimakersuite-pa.clients6.google.com,OverseasAI
@@ -159,6 +159,7 @@ HOST-SUFFIX,experiencebillmelater.com,OverseasAI
 HOST-SUFFIX,fal.ai,OverseasAI
 HOST-SUFFIX,fastspring.com,OverseasAI
 HOST-SUFFIX,fathom.video,OverseasAI
+HOST-SUFFIX,featureassets.org,OverseasAI
 HOST-SUFFIX,featuregates.org,OverseasAI
 HOST-SUFFIX,filipino-music.net,OverseasAI
 HOST-SUFFIX,firecrawl.dev,OverseasAI
@@ -175,7 +176,12 @@ HOST-SUFFIX,gmoney.org,OverseasAI
 HOST-SUFFIX,google.com,OverseasAI
 HOST-SUFFIX,grammarly.com,OverseasAI
 HOST-SUFFIX,grep.app,OverseasAI
+HOST-SUFFIX,grok-sandbox.com,OverseasAI
 HOST-SUFFIX,grok.com,OverseasAI
+HOST-SUFFIX,grokipedia.com,OverseasAI
+HOST-SUFFIX,groksupport.com,OverseasAI
+HOST-SUFFIX,groktpcontent.com,OverseasAI
+HOST-SUFFIX,grokusercontent.com,OverseasAI
 HOST-SUFFIX,groq.com,OverseasAI
 HOST-SUFFIX,hf.co,OverseasAI
 HOST-SUFFIX,hf.space,OverseasAI
