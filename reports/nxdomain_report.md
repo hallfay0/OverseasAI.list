@@ -1,8 +1,8 @@
-# NXDOMAIN Report (2026-05-26 05:57:22Z)
+# NXDOMAIN Report (2026-05-27 06:07:44Z)
 
 Checked domains: 474
-OK: 469
-NXDOMAIN: 2
+OK: 468
+NXDOMAIN: 3
 UNKNOWN: 3
 
 Threshold: 3 consecutive NXDOMAIN
