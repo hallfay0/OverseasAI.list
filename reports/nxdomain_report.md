@@ -1,9 +1,9 @@
-# NXDOMAIN Report (2026-07-04 05:36:06Z)
+# NXDOMAIN Report (2026-07-05 05:54:19Z)
 
 Checked domains: 574
-OK: 537
+OK: 538
 NXDOMAIN: 3
-UNKNOWN: 34
+UNKNOWN: 33
 
 Threshold: 3 consecutive NXDOMAIN
 
@@ -15,13 +15,12 @@ Threshold: 3 consecutive NXDOMAIN
 ## Unknowns
 - qpoe.com
 - simility.com
-- venmo.info
 - venmo.net
-- venmo.org
 - viggle.ai
 - voice.ai
 - voyageai.com
 - wandb.ai
+- wandb.com
 - warp.dev
 - watsonx.ai
 - weaviate.io
