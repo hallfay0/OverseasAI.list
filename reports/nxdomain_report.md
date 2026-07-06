@@ -1,9 +1,9 @@
-# NXDOMAIN Report (2026-07-05 05:54:19Z)
+# NXDOMAIN Report (2026-07-06 06:17:18Z)
 
 Checked domains: 574
-OK: 538
+OK: 531
 NXDOMAIN: 3
-UNKNOWN: 33
+UNKNOWN: 40
 
 Threshold: 3 consecutive NXDOMAIN
 
@@ -15,7 +15,12 @@ Threshold: 3 consecutive NXDOMAIN
 ## Unknowns
 - qpoe.com
 - simility.com
+- venmo-touch.com
+- venmo.com
+- venmo.info
 - venmo.net
+- venmo.org
+- venmo.s3.amazonaws.com
 - viggle.ai
 - voice.ai
 - voyageai.com
@@ -36,6 +41,7 @@ Threshold: 3 consecutive NXDOMAIN
 - www-paypal.info
 - www-paypal.us
 - www.bing.com
+- wwwxoom.com
 - x.ai
 - xn--bnq297cix3a.cn
 - xoom-experience.com
@@ -45,4 +51,5 @@ Threshold: 3 consecutive NXDOMAIN
 - xoom.us
 - xoomcom.com
 - you.com
+- zed.dev
 - zenrows.com
