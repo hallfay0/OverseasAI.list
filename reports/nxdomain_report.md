@@ -1,9 +1,9 @@
-# NXDOMAIN Report (2026-07-09 05:53:46Z)
+# NXDOMAIN Report (2026-07-10 05:52:20Z)
 
 Checked domains: 574
-OK: 535
+OK: 534
 NXDOMAIN: 3
-UNKNOWN: 36
+UNKNOWN: 37
 
 Threshold: 3 consecutive NXDOMAIN
 
@@ -13,6 +13,7 @@ Threshold: 3 consecutive NXDOMAIN
 - paypal-referral.com
 
 ## Unknowns
+- qpoe.com
 - simility.com
 - venmo.com
 - venmo.info
@@ -36,9 +37,9 @@ Threshold: 3 consecutive NXDOMAIN
 - wordtune.com
 - writer.com
 - writesonic.com
+- www-paypal.info
 - www-paypal.us
 - www.bing.com
-- wwwxoom.com
 - x.ai
 - xn--bnq297cix3a.cn
 - xoom-experience.com
