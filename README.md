@@ -24,7 +24,7 @@
 
 - ✅ **覆盖全面** —— 100+ 海外 AI 服务商，含模型厂商、推理云、编程 Agent、生成式媒体、Agent / 数据基础设施
 - 🤖 **每日自动同步** —— GitHub Actions 每天拉取上游、重建规则、并做 NXDOMAIN 失效检测
-- 🧩 **多客户端开箱即用** —— Surge / Clash / Loon / Shadowrocket / Quantumult X / Quantumult / sing-box
+- 🧩 **多客户端开箱即用** —— Surge / Clash / Loon / Shadowrocket / Quantumult X / Quantumult / sing-box / Egern
 - 🎯 **边界清晰** —— 优先精确域名，避免过宽的 catch-all 把大量非 AI 流量一并纳入
 - 🌏 **聚焦海外** —— 默认排除大陆可直连的大陆系 AI 服务，并标注归属存疑/已停服的服务
 
@@ -128,6 +128,7 @@ rules:
 | **Quantumult** | `…/main/rule/Quantumult/OverseasAI/OverseasAI.list` |
 | **sing-box**（源格式 `.json`） | `…/main/rule/Singbox/OverseasAI/OverseasAI.json` |
 | **sing-box**（编译 `.srs`） | `…/main/rule/Singbox/OverseasAI/OverseasAI.srs` |
+| **Egern**（`.yaml`） | `…/main/rule/Egern/OverseasAI/OverseasAI.yaml` |
 
 > `…` 代表前缀 `https://raw.githubusercontent.com/viewer12/OverseasAI.list`。国内访问 GitHub 较慢时，可自行替换为 jsDelivr 等加速镜像。
 
@@ -155,9 +156,10 @@ OverseasAI.list
 │   │   ├── OverseasAI_Resolve.list  # 去掉 no-resolve 的变体
 │   │   └── OverseasAI_Custom.list   # 仅自定义补充域名（贡献入口）
 │   ├── Clash|Loon|Shadowrocket|QuantumultX|Quantumult/OverseasAI/OverseasAI.list
-│   └── Singbox/OverseasAI/
-│       ├── OverseasAI.json          # sing-box 源格式（version 3）
-│       └── OverseasAI.srs           # sing-box 编译后的二进制
+│   ├── Singbox/OverseasAI/
+│   │   ├── OverseasAI.json          # sing-box 源格式（version 3）
+│   │   └── OverseasAI.srs           # sing-box 编译后的二进制
+│   └── Egern/OverseasAI/OverseasAI.yaml  # Egern 规则集（YAML）
 ├── scripts/
 │   ├── sync_rules.py                # 合并上游核心 + 上游补充 + 自定义 → Surge 主规则
 │   ├── build_clients.py             # 由 Surge 主规则生成其余客户端格式
@@ -258,7 +260,7 @@ Its single goal: **cleanly route your overseas-AI traffic** (model vendors, AI a
 
 - ✅ **Broad coverage** — 100+ overseas AI services across vendors, inference clouds, coding agents, generative media, and agent/data infra
 - 🤖 **Daily auto-sync** — GitHub Actions pulls upstream, rebuilds rules, and runs NXDOMAIN checks every day
-- 🧩 **Multi-client** — Surge / Clash / Loon / Shadowrocket / Quantumult X / Quantumult / sing-box
+- 🧩 **Multi-client** — Surge / Clash / Loon / Shadowrocket / Quantumult X / Quantumult / sing-box / Egern
 - 🎯 **Narrow by design** — prefers precise domains; avoids broad catch-alls that capture lots of non-AI traffic
 - 🌏 **Overseas-focused** — excludes mainland-first AI services reachable directly from mainland China
 
@@ -316,6 +318,7 @@ OverseasAI = https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rul
 | Quantumult | `…/main/rule/Quantumult/OverseasAI/OverseasAI.list` |
 | sing-box (`.json`) | `…/main/rule/Singbox/OverseasAI/OverseasAI.json` |
 | sing-box (`.srs`) | `…/main/rule/Singbox/OverseasAI/OverseasAI.srs` |
+| Egern (`.yaml`) | `…/main/rule/Egern/OverseasAI/OverseasAI.yaml` |
 
 > `…` = `https://raw.githubusercontent.com/viewer12/OverseasAI.list`.
 
