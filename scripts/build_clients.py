@@ -156,6 +156,101 @@ def build_singbox(rules: list[str], output_dir: Path) -> None:
         print("  [Singbox] sing-box not found in PATH; .srs compilation skipped")
 
 
+# 可安全作为 YAML 裸标量的值：域名、CIDR、ASN 号等。
+# 通配符(*)、正则等含特殊字符的值需加双引号。
+_SAFE_SCALAR = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._:/\-]*$")
+
+
+def yaml_scalar(value: str) -> str:
+    """为 egern YAML 列表项做最小化安全引用。
+    普通域名/CIDR/ASN 保持裸值；含通配符或正则等特殊字符时用双引号包裹。
+    """
+    if _SAFE_SCALAR.match(value):
+        return value
+    escaped = value.replace("\\", "\\\\").replace('"', '\\"')
+    return f'"{escaped}"'
+
+
+def build_egern(rules: list[str], meta: list[str], output_dir: Path) -> None:
+    """生成 egern 的 YAML 规则集（rule-set）。
+
+    egern 规则集使用 *_set 顶层键，IP 类规则的 no-resolve 修饰符
+    通过顶层 `no_resolve: true` 表达。IP-ASN 值形如 "AS20473"。
+    参考：https://egernapp.com/docs/configuration/rules/
+    """
+    buckets: dict[str, list[str]] = {
+        "domain_set": [],
+        "domain_suffix_set": [],
+        "domain_keyword_set": [],
+        "domain_wildcard_set": [],
+        "domain_regex_set": [],
+        "ip_cidr_set": [],
+        "ip_cidr6_set": [],
+        "asn_set": [],
+        "user_agent_set": [],
+    }
+    type_to_bucket = {
+        "DOMAIN": "domain_set",
+        "DOMAIN-SUFFIX": "domain_suffix_set",
+        "DOMAIN-KEYWORD": "domain_keyword_set",
+        "DOMAIN-WILDCARD": "domain_wildcard_set",
+        "DOMAIN-REGEX": "domain_regex_set",
+        "IP-CIDR": "ip_cidr_set",
+        "IP-CIDR6": "ip_cidr6_set",
+        "IP-ASN": "asn_set",
+        "USER-AGENT": "user_agent_set",
+    }
+
+    has_no_resolve = False
+    skipped: Counter = Counter()
+
+    for rule in rules:
+        parts = rule.split(",")
+        rule_type = parts[0].strip()
+        value = parts[1].strip() if len(parts) > 1 else ""
+        modifiers = [p.strip() for p in parts[2:]]
+
+        bucket = type_to_bucket.get(rule_type)
+        if bucket is None:
+            skipped[rule_type] += 1
+            continue
+
+        if "no-resolve" in modifiers:
+            has_no_resolve = True
+
+        if rule_type == "IP-ASN":
+            value = f"AS{value}"
+
+        buckets[bucket].append(value)
+
+    for rule_type, count in skipped.items():
+        print(f"  [Egern] Skipped {count} {rule_type} rule(s) (unsupported)")
+
+    lines: list[str] = ["# NAME: OverseasAI"]
+    lines.extend(meta)
+    for key, items in buckets.items():
+        if items:
+            lines.append(f"# {key}: {len(items)}")
+    lines.append(f"# TOTAL: {sum(len(v) for v in buckets.values())}")
+
+    if has_no_resolve:
+        lines.append("no_resolve: true")
+
+    for key, items in buckets.items():
+        if not items:
+            continue
+        lines.append(f"{key}:")
+        for item in items:
+            lines.append(f"- {yaml_scalar(item)}")
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+    out_path = output_dir / "OverseasAI.yaml"
+    out_path.write_text("\n".join(lines) + "\n")
+
+    counts_str = ", ".join(f"{len(v)} {k}" for k, v in buckets.items() if v)
+    print(f"  [Egern] .yaml written: {out_path} ({counts_str})")
+
+
 def main() -> None:
     repo_root = Path(__file__).resolve().parents[1]
     surge_path = repo_root / "rule" / "Surge" / "OverseasAI" / "OverseasAI.list"
@@ -232,6 +327,9 @@ def main() -> None:
 
     singbox_dir = repo_root / "rule" / "Singbox" / "OverseasAI"
     build_singbox(rules_sorted, singbox_dir)
+
+    egern_dir = repo_root / "rule" / "Egern" / "OverseasAI"
+    build_egern(rules_sorted, meta, egern_dir)
 
 
 if __name__ == "__main__":
