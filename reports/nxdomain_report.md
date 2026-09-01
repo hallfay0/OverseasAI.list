@@ -1,4 +1,4 @@
-# NXDOMAIN Report (2026-08-31 07:50:10Z)
+# NXDOMAIN Report (2026-09-01 06:56:03Z)
 
 Checked domains: 574
 OK: 537
@@ -14,13 +14,11 @@ Threshold: 3 consecutive NXDOMAIN
 - paypal.info
 
 ## Unknowns
+- paypal.org.cn
+- paypalcommunity.cn
 - qpoe.com
 - simility.com
 - venmo.info
-- venmo.net
-- venmo.org
-- viggle.ai
-- voice.ai
 - voyageai.com
 - wandb.ai
 - wandb.com
@@ -39,11 +37,13 @@ Threshold: 3 consecutive NXDOMAIN
 - www-paypal.us
 - www.bing.com
 - wwwxoom.com
+- x.ai
 - xn--bnq297cix3a.cn
+- xoom-experience.com
 - xoom.com
+- xoom.io
 - xoom.net.cn
 - xoom.us
 - xoomcom.com
 - you.com
-- zed.dev
 - zenrows.com
