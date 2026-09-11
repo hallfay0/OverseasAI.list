@@ -1,9 +1,9 @@
-# NXDOMAIN Report (2026-09-10 06:47:29Z)
+# NXDOMAIN Report (2026-09-11 06:46:56Z)
 
 Checked domains: 574
 OK: 536
-NXDOMAIN: 3
-UNKNOWN: 35
+NXDOMAIN: 4
+UNKNOWN: 34
 
 Threshold: 3 consecutive NXDOMAIN
 
@@ -14,10 +14,10 @@ Threshold: 3 consecutive NXDOMAIN
 - paypal.info
 
 ## Unknowns
-- paypal.info
 - simility.com
 - venmo.info
 - venmo.net
+- venmo.org
 - venmo.s3.amazonaws.com
 - viggle.ai
 - voice.ai
@@ -28,7 +28,6 @@ Threshold: 3 consecutive NXDOMAIN
 - watsonx.ai
 - weaviate.io
 - webmoneyinfo.com
-- wellsaid.io
 - wellsaidlabs.com
 - windsurf-telemetry.codeium.com
 - windsurf.ai
@@ -37,13 +36,13 @@ Threshold: 3 consecutive NXDOMAIN
 - writer.com
 - writesonic.com
 - www-paypal.info
-- www.bing.com
+- www-paypal.us
 - wwwxoom.com
 - x.ai
-- xn--bnq297cix3a.cn
 - xoom-experience.com
 - xoom.com
 - xoom.io
+- xoom.net.cn
 - xoom.us
 - xoomcom.com
 - you.com
